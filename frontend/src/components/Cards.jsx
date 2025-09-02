@@ -1,74 +1,87 @@
 import React, { useState, useEffect } from "react";
 import 'devicon/devicon.min.css';
-import CardContent from "../CardContent.json"
+import CardContent from "../CardContent.json";
 
-export default ({ attempts, setAttempts }) => {
+export default ({ attempts, setAttempts, setHasWon }) => {
     const [flippedCards, setFlippedCards] = useState({});
     const [shuffledCards, setShuffledCards] = useState([]);
     const [selectCards, setSelectCards] = useState([]);
 
-    const handleFlip = (index) => {
-        if (selectCards.length === 2 || flippedCards[index]) return;
-
-        const card = shuffledCards[index];
-
-        setFlippedCards((prev) => ({
-        ...prev,
-        [index]: true,
-        }));
-
-        // Armazena o index e o value
-        setSelectCards((prev) => [...prev, { index, value: card.value }]);
-    };
-
+    // Função para embaralhar cartas
     const shuffleArray = (array) => {
         const newArray = [...array];
-        for (let i = newArray.length - 1; i > 0; i--) {
+            for (let i = newArray.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
         }
         return newArray;
     };
 
+    // Embaralha as cartas ao montar o componente
     useEffect(() => {
         setShuffledCards(shuffleArray(CardContent));
     }, []);
 
+    // Função para virar a carta
+    const handleFlip = (index) => {
+        if (selectCards.length === 2 || flippedCards[index]) return;
+
+        const card = shuffledCards[index];
+
+        setFlippedCards((prev) => ({
+            ...prev,
+            [index]: true,
+        }));
+
+        setSelectCards((prev) => [...prev, { index, value: card.value }]);
+    };
+
+    // Verifica se duas cartas selecionadas formam um par
     const verifyCards = () => {
         if (selectCards.length === 2) {
-            setAttempts(attempts + 1)
-            const [first, second] = selectCards
+            setAttempts(attempts + 1);
+            const [first, second] = selectCards;
 
             if (first.value !== second.value) {
                 setTimeout(() => {
-                    setFlippedCards((prev) => {
-                        const newFlipped = { ...prev }
-                        newFlipped[first.index] = false
-                        newFlipped[second.index] = false
-                        return newFlipped
-                    })
-                    setSelectCards([])
-                }, 1000)
+                    setFlippedCards((prev) => ({
+                        ...prev,
+                        [first.index]: false,
+                        [second.index]: false,
+                    }));
+                    setSelectCards([]);
+                }, 1000);
             } else {
-                setSelectCards([])
+                setSelectCards([]);
             }
         }
-    }
+    };
 
+    // Dispara a verificação quando selectCards muda
     useEffect(() => {
-        verifyCards()
-    }, [selectCards])
+        verifyCards();
+    }, [selectCards]);
+
+    // Verifica vitória sempre que flippedCards muda
+    useEffect(() => {
+        if (shuffledCards.length > 0) {
+            const allFlipped = Object.values(flippedCards).filter(Boolean).length === shuffledCards.length;
+            if (allFlipped) {
+                const timeout = setTimeout(() => {
+                    setHasWon(true);
+                }, 1000); // 1 segundo
+                return () => clearTimeout(timeout); // limpa se algo mudar antes
+            }
+        }
+    }, [flippedCards, shuffledCards, setHasWon]);
 
     return (
         <div className="flex justify-center items-center flex-wrap gap-2">
             {shuffledCards.map((content, index) => (
-                <div
-                    key={index}
-                    className="h-45 w-35 [perspective:1000px] cursor-pointer"
-                >
+                <div key={index} className="h-45 w-35 [perspective:1000px] cursor-pointer">
                     <div
                         className={`shadow-xl rounded-xl border border-gray-50 relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
-                            flippedCards[index] ? "[transform:rotateY(-180deg)]" : ""
+                              flippedCards[index] ? "[transform:rotateY(-180deg)]" : ""
                         }`}
                     >
                         {/* Verso */}
@@ -77,11 +90,11 @@ export default ({ attempts, setAttempts }) => {
                             className="m-2 rounded-xl absolute inset-0 [backface-visibility:hidden] flex items-center justify-center"
                             style={{
                                 backgroundImage: `repeating-linear-gradient(
-                                -45deg,           /* ângulo da diagonal */
-                                #004f8c,         /* primeira cor */
-                                #004f8c 20px,    /* até 20px */
-                                #00e1ff 20px,    /* segunda cor começa */
-                                #00e1ff 40px     /* até 40px, depois repete */
+                                -45deg,
+                                #e0f2fe,
+                                #e0f2fe 20px,
+                                #cbd5e1 20px,
+                                #cbd5e1 40px
                                 )`,
                             }}
                         ></div>
