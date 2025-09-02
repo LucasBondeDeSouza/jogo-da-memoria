@@ -1,98 +1,98 @@
 [
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1977/image",
-        "value": "atletico-mg"
+        "figure": "devicon-html5-plain colored text-8xl",
+        "value": "html"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1977/image",
-        "value": "atletico-mg"
+        "figure": "devicon-html5-plain colored text-8xl",
+        "value": "html"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1958/image",
-        "value": "botafogo"
+        "figure": "devicon-css3-plain colored text-8xl",
+        "value": "css"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1958/image",
-        "value": "botafogo"
+        "figure": "devicon-css3-plain colored text-8xl",
+        "value": "css"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1957/image",
-        "value": "corinthians"
+        "figure": "devicon-javascript-plain colored text-8xl",
+        "value": "javascript"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1957/image",
-        "value": "corinthians"
+        "figure": "devicon-javascript-plain colored text-8xl",
+        "value": "javascript"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1954/image",
-        "value": "cruzeiro"
+        "figure": "devicon-typescript-plain colored text-8xl",
+        "value": "typescript"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1954/image",
-        "value": "cruzeiro"
+        "figure": "devicon-typescript-plain colored text-8xl",
+        "value": "typescript"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/5981/image",
-        "value": "flamengo"
+        "figure": "devicon-bootstrap-plain colored text-8xl",
+        "value": "bootstrap"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/5981/image",
-        "value": "flamengo"
+        "figure": "devicon-bootstrap-plain colored text-8xl",
+        "value": "bootstrap"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1961/image",
-        "value": "fluminense"
+        "figure": "devicon-tailwindcss-original colored text-8xl",
+        "value": "tailwind"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1961/image",
-        "value": "fluminense"
+        "figure": "devicon-tailwindcss-original colored text-8xl",
+        "value": "tailwind"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/5926/image",
-        "value": "gremio"
+        "figure": "devicon-python-plain colored text-8xl",
+        "value": "python"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/5926/image",
-        "value": "gremio"
+        "figure": "devicon-python-plain colored text-8xl",
+        "value": "python"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1966/image",
-        "value": "internacional"
+        "figure": "devicon-nodejs-plain-wordmark colored text-8xl",
+        "value": "node"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1966/image",
-        "value": "internacional"
+        "figure": "devicon-nodejs-plain-wordmark colored text-8xl",
+        "value": "node"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1963/image",
-        "value": "palmeiras"
+        "figure": "devicon-react-original colored text-8xl",
+        "value": "react"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1963/image",
-        "value": "palmeiras"
+        "figure": "devicon-react-original colored text-8xl",
+        "value": "react"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1968/image",
-        "value": "santos"
+        "figure": "devicon-mysql-plain-wordmark colored text-8xl",
+        "value": "mysql"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1968/image",
-        "value": "santos"
+        "figure": "devicon-mysql-plain-wordmark colored text-8xl",
+        "value": "mysql"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1981/image",
-        "value": "sao-paulo"
+        "figure": "devicon-github-original colored text-8xl",
+        "value": "github"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1981/image",
-        "value": "sao-paulo"
+        "figure": "devicon-github-original colored text-8xl",
+        "value": "github"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1974/image",
-        "value": "vasco"
+        "figure": "devicon-docker-plain colored text-8xl",
+        "value": "docker"
     },
     {
-        "figure": "https://img.sofascore.com/api/v1/team/1974/image",
-        "value": "vasco"
+        "figure": "devicon-docker-plain colored text-8xl",
+        "value": "docker"
     }
 ]

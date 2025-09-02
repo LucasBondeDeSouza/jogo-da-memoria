@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import 'devicon/devicon.min.css';
 import CardContent from "../CardContent.json"
 
 export default ({ attempts, setAttempts }) => {
@@ -73,16 +74,21 @@ export default ({ attempts, setAttempts }) => {
                         {/* Verso */}
                         <div
                             onClick={() => handleFlip(index)}
-                            className="m-2 rounded-xl absolute inset-0 [backface-visibility:hidden] bg-[#004f8c] flex items-center justify-center"
+                            className="m-2 rounded-xl absolute inset-0 [backface-visibility:hidden] flex items-center justify-center"
                             style={{
-                            backgroundImage:
-                                "url(https://www.transparenttextures.com/patterns/black-thread-light.png)",
+                                backgroundImage: `repeating-linear-gradient(
+                                -45deg,           /* ângulo da diagonal */
+                                #004f8c,         /* primeira cor */
+                                #004f8c 20px,    /* até 20px */
+                                #00e1ff 20px,    /* segunda cor começa */
+                                #00e1ff 40px     /* até 40px, depois repete */
+                                )`,
                             }}
                         ></div>
 
                         {/* Frente */}
                         <div className="m-3 rounded-xl border border-gray-50 absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
-                            <img src={content.figure} alt="" />
+                            <i className={content.figure}></i>
                         </div>
                     </div>
                 </div>
