@@ -86,18 +86,11 @@ export default ({ attempts, setAttempts, setHasWon }) => {
                     >
                         {/* Verso */}
                         <div
-                            onClick={() => handleFlip(index)}
-                            className="m-2 rounded-xl absolute inset-0 [backface-visibility:hidden] flex items-center justify-center"
-                            style={{
-                                backgroundImage: `repeating-linear-gradient(
-                                -45deg,
-                                #e0f2fe,
-                                #e0f2fe 20px,
-                                #cbd5e1 20px,
-                                #cbd5e1 40px
-                                )`,
-                            }}
-                        ></div>
+                            onClick={() => handleFlip(index)} 
+                            className="m-2 rounded-xl absolute inset-0 [backface-visibility:hidden] bg-[#004f8c] flex items-center justify-center" 
+                            style={{ backgroundImage: "url(https://www.transparenttextures.com/patterns/black-thread-light.png)", }} 
+                        >
+                        </div>
 
                         {/* Frente */}
                         <div className="m-3 rounded-xl border border-gray-50 absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
